@@ -1,0 +1,38 @@
+<div class="DynamicPart"> <!--  content goes here -->
+<script type="text/javascript">
+
+function bigPicture(theId,theText) {
+	document.getElementById(theId).innerHTML = "<img src='saleimages/" + theId + "large.jpg' alt='" + theId + "' style='float: right; padding-left: 1em;' /><div style='clear: both;'/>" + theText;
+}
+
+</script>
+<div  ng-controller="ForsaleCtrl">
+<div class="BigText">
+	<div style="color: white; background-color: #456572; text-align: center;">
+	Pianos For Sale
+	</div>
+	<p>
+	Most are located at Paul's shop in Franklin Square, NY <a href="http://www.google.com/maps?f=q&hl=en&q=1115+theodora+street+franklin+square,+ny+11010&ie=UTF8&z=15&ll=40.705205,-73.681483&spn=0.015063,0.047078&om=1&iwloc=addr"  onclick="window.open(this.href);return false;" rel="external">(map)</a>, and can be viewed by appointment. Designers, decorators, and piano teachers are always welcome.
+	</p>
+</div>
+<br/>
+
+<!--  small images 144 px wide  large 432 px wide - name them [div id]small.jpg and
+[div id]large.jpg  and put them in saleimages -->
+
+<div ng-repeat="piano in pianos">
+
+<div id='{{piano.graphic}}' class="SaleItem">
+	{{checkForSold(piano);}}
+<a href=""><img ng-src='saleimages/{{piano.graphic}}small.jpg' alt='{{piano.graphic}}' style='float: right; padding-left: 2em;' ng-click="bigPhoto(piano.graphic,piano.description + ' $' + (piano.price / 100));"></a>
+<br><span style="color: red; font-weight: bold; text-decoration: none;">{{piano.soldText}}</span>{{piano.description}}
+<br>{{piano.price / 100 | currency}}
+<br>(click photo to enlarge)
+</div>
+</div><!-- ng-repeat -->
+
+<div class="BigText" style="clear: both;"><br/>Also available (photos coming soon): <br/><br/></div>
+<div class="SaleItemNoPhoto">Steinway square grand 1888 rosewood $20,000</div>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div> <!-- Dynamic -->

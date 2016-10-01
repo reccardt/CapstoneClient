@@ -1,0 +1,137 @@
+.WholeThing {
+	color: #ffffff;
+	background: #456572;
+	font-family: sans-serif;
+	/*font-size: .16in;*/
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 20px;
+}
+
+.TopPart {
+	text-align: left;
+	line-height: .168in;
+	background-image: url('../images/bggrand.png');
+	background-repeat: repeat-x;
+/*	margin-top: 10px;
+	margin-bottom: 20px; */
+}
+
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.TopPart a {
+	color: #ffffff;
+	width: 100%;
+	text-decoration: none;
+}
+
+.TopPart a:hover {
+	background: #ffffff none;
+	color: #456572;
+}
+
+.DynamicPart {
+	color: black;
+	background: #ffffff;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+/*	margin-left: 50px;
+	margin-right: 30px;*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.TablePart {
+	color: black;
+	background: #ffffff;
+	/*width: 80%;*/
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 0px;
+}
+
+
+
+.TheMenu {
+	line-height: .24in;
+	background: #456572 none;
+	margin-left: 70px;
+	margin-right: 10px;
+}
+
+.TheMenu ul {
+	background: #456572 none;
+	padding-left: 20px;
+	list-style-type: none;
+	text-align: center;
+}
+
+.TheMenu li {
+	width: 7em;
+	float: left;
+	margin-right: 1em;
+	text-align: center;
+	background: #456572 none;
+}
+
+.TheMenu a {
+	display: block;
+	color: #ffffff;
+	width: 100%;
+	text-decoration: none;
+}
+
+.TheMenu a:hover,.TheMenu li:hover {
+	background: #ffffff none;
+	color: #456572;
+}
+
+.AlreadyThere {
+	background: #ffffff none;
+	color: #456572;
+}
+
+.AlreadyThere a {
+	background: #ffffff none;
+	color: #456572;
+}
+
+.BigBoldText
+	{
+	font-size: .19in;
+	font-weight: bold;
+	line-height: .20in;
+	}
+
+.BolderText {
+	font-weight: bold;
+	font-size: .18in;
+	line-height: .168in;
+}
+
+.BigText	{
+	font-size: .19in;
+	clear: both;
+	}
+
+.SaleItem {
+	width: 80%;
+	padding-left: 2em;
+	padding-top: 1em;
+	clear: both;
+	text-align: right;
+}
+.SaleItemNoPhoto {
+	height: 3em;
+	width: 80%;
+	padding-left: 2em;
+	clear: both;
+}

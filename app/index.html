@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="paulApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="paulApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="paulApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="paulApp"  class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="piano,pianos, piano tuning, piano tuner, piano repair, piano moving, piano service,piano restoration,piano reconditioning,piano rebuilding,piano refurishing,piano sales,piano refinishing,keyboard, keyboards, tuning, tuner,technician, rebuild, refinish, sound board, pin block, action, temperament,tuning hammer,tuning fork, touch, tone, concert, grand, upright, studio, console, spinet, Steinway, Baldwin, Acrosonic, Hamilton, Kimball, Chickering, Knabe, Mason &amp; Hamlin, Wurlitzer, Sohmer, Yamaha, Kawai, Young Chang, Weber, Samick, Bechstein, Bosendorfer"/>
+  <meta name="description" content="Paul Eccardt's piano tuning, repair, regulation, and voicing service. Piano rebuilding and sales also available."/>
+  <meta name="verify-v1" content="e4MRgsNv6EzrMyoDi/yCpeAiY1k5rSNrJjFEJ5JC4Ys=" /> <!-- Google verification -->
+  <title>Paul's Pianos</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="SHORTCUT ICON" href="images/favicon.ico"/>
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+      <!-- SCROLLS -->
+      <!-- load bootstrap and fontawesome via CDN -->
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+</head>
+<body >
+<!--<img src='images/ppianotext.gif' alt='Paul&#39;s Pianos' style='float: left; margin-right: 40px;'/>-->
+
+        <!-- HEADER AND NAVBAR -->
+
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						  <span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+                    <a style="font-size: 30px;" class="navbar-brand" href="#!/home">Paul's Pianos</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#!/home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#!/tuning"><i class="fa fa-music"></i> Tuning</a></li>
+                    <li><a href="#!/forsale"><i class="fa fa-money"></i> For Sale</a></li>
+                    <li><a href="#!/links"><i class="fa fa-heart"></i> Friends and Picks</a></li>
+                    <li><a href="#!/contactus"><i class="fa fa-comment"></i> Contact Us</a></li>
+
+                </ul>
+             </div>
+            </div>
+            </nav>
+
+
+ 	<table class='TablePart'>	<tbody><tr>
+	<td style='background-image: url("images/keyboardvert.gif"); background-repeat: repeat-y; width: 64px;' />
+	<td>
+
+
+  <div ng-view class="ViewPart" ></div>
+
+	</td>
+	<td style='background-image: url("images/keyboardvert2.gif"); background-repeat: repeat-y; width: 64px;' />
+	</tr></tbody></table>
+
+   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+   <div class="container">
+      <div class="navbar-text pull-left">
+      <p>Paul's Pianos 1115 Theodora Street 
+						Franklin Square, NY 11010 
+						516 326-6944 <a href='mailto:paul@paulspianos.com'>e-mail: paul@paulspianos.com</a></p>
+   </div>
+</div>
+</nav>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+  // This causes the mobile drop-down menu button to retract on selection:
+  $( document ).ready(function() {
+     $(".navbar-nav li a").click(function(event) {
+       $(".navbar-collapse").collapse('hide');
+     });
+// This updates the active tab in the navbar:
+     $(".nav a").on("click", function(){
+        $(".nav").find(".active").removeClass("active");
+        $(this).parent().addClass("active");
+     });
+    });
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="app.js"></script>
+  <script src="home/home.js"></script>
+  <script src="tuning/tuning.js"></script>
+  <script src="forsale/forsale.js"></script>
+  <script src="links/links.js"></script>
+  <script src="contactus/contactus.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Paul's Pianos visitors</title>
+  <link rel="SHORTCUT ICON" href="images/favicon.ico"/>
+
+<script type="text/javascript">
+<!--
+var req;
+var htmlHolder;
+var currentPage = " ";
+
+function loadPage(theObjectId,theUrl) {
+if(theUrl != currentPage) {
+    currentPage = theUrl;
+    htmlHolder = theObjectId;
+    if(window.XMLHttpRequest) { // standards compliant browser
+      req = new XMLHttpRequest();
+      req.onreadystatechange = processAjaxResponse;
+      req.open("GET", theUrl, true);
+      req.send(null);
+    }   else if(window.ActiveXObject) { // a widely used non-compliant browser
+       req = new ActiveXObject("Microsoft.XMLHTTP");
+       if (req) {
+         req.onreadystatechange = processAjaxResponse;
+         req.open("GET", theUrl, true);
+         req.send();
+       }
+    }
+    else { // needs a newer browser
+      document.getElementById(htmlHolder).innerHTML = 'This page requires an Ajax enabled browser: '
+        + '<a href="http://www.mozilla.org/products/firefox/">'
+        + ' <img border="0" alt="Get Firefox!" title="Get Firefox!"' 
+        + '      src="http://sfx-images.mozilla.org/affiliates/Buttons/88x31/get.gif"/>'
+        + '</a>';
+    }
+  }
+}
+
+function processAjaxResponse() {
+  if (req.readyState == 4) { // it loaded
+		if (req.status == 200 || req.status == 304) {
+        		document.getElementById(htmlHolder).innerHTML = req.responseText;
+      } else {
+      	alert("Error: " + req.statusText + " status number: " + req.status);
+  		}
+	}
+}
+-->
+</script>
+
+</head>
+
+<body>
+<div id="TheText"></div>
+<script type="text/javascript">
+<!--
+loadPage("TheText","visitors.log");
+-->
+</script>
+
+</body>
+</html>
